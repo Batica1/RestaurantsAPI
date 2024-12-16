@@ -56,8 +56,8 @@ Clone the repository to your local machine using the following command:
 # Install Dependencies
 Navigate to the project directory and restore the NuGet packages needed for the project:
 
-```cd restaurant-api```
-```dotnet restore```
+    cd restaurant-api
+    dotnet restore
 
 # Set Up the Database
 
