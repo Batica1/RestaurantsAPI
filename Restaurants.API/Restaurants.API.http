@@ -1,0 +1,58 @@
+@host = https://localhost
+@port = 7005
+@Restaurants.API_HostAddress = https://localhost:7005
+
+###
+GET {{Restaurants.API_HostAddress}}/api/restaurants
+Accept: application/json
+
+###
+@id=5
+GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+Accept: application/json
+
+###
+POST {{Restaurants.API_HostAddress}}/api/restaurants
+Content-Type: application/json
+
+{
+  "name": "New Restaurant",
+  "description": "A new great place to eat",
+  "category" : "Fast Food",
+  "address": {
+    "street": "123 New St",
+    "city": "New City",
+    "zipcode": "12345"
+  },
+  "dishes": [
+    { "name": "Dish 1", "price": 10.5, "description": "" },
+    { "name": "Dish 2", "price": 12.0, "description": "" }
+  ]
+}
+
+###
+
+@id=7
+PUT {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+Content-Type: application/json
+
+{
+  "id": {{id}},
+  "name": "Updated Restaurant Name",
+  "description": "An updated description of the restaurant",
+  "category" : "Fast Food",
+  "address": {
+    "street": "456 Updated St",
+    "city": "Updated City",
+    "zipcode": "67890"
+  },
+  "dishes": [
+    { "name": "Updated Dish 1", "price": 15.0 },
+    { "name": "Updated Dish 2", "price": 18.0 }
+  ]
+}
+
+
+###
+@id=1
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
