@@ -53,8 +53,6 @@ To get started with this project, follow these steps:
 Clone the Repository
 Clone the repository to your local machine using the following command:
 
-    ```git clone https://github.com/your-username/restaurant-api.git```
-
 # Install Dependencies
 Navigate to the project directory and restore the NuGet packages needed for the project:
 
@@ -69,12 +67,12 @@ Update the connection string in the appsettings.json file to point to your datab
 # Run Migrations
 Run the database migrations to set up your tables:
 
-    ```dotnet ef database update```
+    dotnet ef database update
 
 # Run the Application
 Start the API by running the following command:
 
-    ```dotnet run```
+    dotnet run
 
 # Access the API
 The API should now be running at http://localhost:7005 (or a different port, depending on your configuration). You can use tools like Postman or curl to test the API endpoints.
